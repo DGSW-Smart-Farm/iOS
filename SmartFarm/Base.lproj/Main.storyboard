@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="No Virus.ttf">
+            <string>No-Virus</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBg" translatesAutoresizingMaskIntoConstraints="NO" id="QOP-tf-irN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ua-JP-GAK">
+                                <rect key="frame" x="0.0" y="328.5" width="414" height="597.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Farm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H07-lr-F6k">
+                                <rect key="frame" x="25" y="198.5" width="214.5" height="100"/>
+                                <fontDescription key="fontDescription" name="No-Virus" family="No Virus" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H07-lr-F6k" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="58:112" id="9Jf-tb-CE9"/>
+                            <constraint firstItem="5Ua-JP-GAK" firstAttribute="top" secondItem="H07-lr-F6k" secondAttribute="bottom" constant="30" id="Box-bf-d5y"/>
+                            <constraint firstAttribute="trailing" secondItem="5Ua-JP-GAK" secondAttribute="trailing" id="L8u-fo-luT"/>
+                            <constraint firstItem="5Ua-JP-GAK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MSY-uE-56z"/>
+                            <constraint firstItem="QOP-tf-irN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V9g-nd-9Te"/>
+                            <constraint firstAttribute="bottom" secondItem="5Ua-JP-GAK" secondAttribute="bottom" constant="-30" id="Xu3-tM-L1r"/>
+                            <constraint firstItem="QOP-tf-irN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="hS4-L3-Ift"/>
+                            <constraint firstItem="H07-lr-F6k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="iqv-Yq-dXd"/>
+                            <constraint firstItem="5Ua-JP-GAK" firstAttribute="top" secondItem="QOP-tf-irN" secondAttribute="bottom" constant="-30" id="j8z-cH-hN2"/>
+                            <constraint firstItem="QOP-tf-irN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rAL-ZZ-sSy"/>
+                            <constraint firstItem="QOP-tf-irN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="8:20" id="rRL-Rg-Que"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backView" destination="5Ua-JP-GAK" id="u4c-Q4-ibv"/>
+                        <outlet property="titleLabel" destination="H07-lr-F6k" id="5yH-Vr-Edb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mainBg" width="375" height="274"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
