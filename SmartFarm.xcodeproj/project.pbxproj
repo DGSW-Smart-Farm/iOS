@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6238A28C2626FE400052AEB0 /* No Virus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6238A28B2626FE400052AEB0 /* No Virus.ttf */; };
+		6255910926303F4700715957 /* NanumSquare_acL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6255910426303F4600715957 /* NanumSquare_acL.ttf */; };
+		6255910A26303F4700715957 /* NanumSquare_acR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6255910526303F4600715957 /* NanumSquare_acR.ttf */; };
+		6255910B26303F4700715957 /* NanumSquare_acEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6255910626303F4700715957 /* NanumSquare_acEB.ttf */; };
+		6255910C26303F4700715957 /* NanumSquare_acB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6255910726303F4700715957 /* NanumSquare_acB.ttf */; };
+		6255910D26303F4700715957 /* SDSwaggerTTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6255910826303F4700715957 /* SDSwaggerTTF.ttf */; };
+		625591122630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 625591112630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf */; };
 		6267831826157DE200EED0C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267831726157DE200EED0C5 /* AppDelegate.swift */; };
 		6267831A26157DE200EED0C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267831926157DE200EED0C5 /* SceneDelegate.swift */; };
 		6267831C26157DE200EED0C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267831B26157DE200EED0C5 /* ViewController.swift */; };
@@ -19,6 +25,12 @@
 
 /* Begin PBXFileReference section */
 		6238A28B2626FE400052AEB0 /* No Virus.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "No Virus.ttf"; sourceTree = "<group>"; };
+		6255910426303F4600715957 /* NanumSquare_acL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acL.ttf; sourceTree = "<group>"; };
+		6255910526303F4600715957 /* NanumSquare_acR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acR.ttf; sourceTree = "<group>"; };
+		6255910626303F4700715957 /* NanumSquare_acEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acEB.ttf; sourceTree = "<group>"; };
+		6255910726303F4700715957 /* NanumSquare_acB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acB.ttf; sourceTree = "<group>"; };
+		6255910826303F4700715957 /* SDSwaggerTTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDSwaggerTTF.ttf; sourceTree = "<group>"; };
+		625591112630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DXMSubtitlesM-KSCpc-EUC-H.ttf"; sourceTree = "<group>"; };
 		6267831426157DE200EED0C5 /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6267831726157DE200EED0C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6267831926157DE200EED0C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +53,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6255910F26303F5200715957 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6255910726303F4700715957 /* NanumSquare_acB.ttf */,
+				625591112630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf */,
+				6255910626303F4700715957 /* NanumSquare_acEB.ttf */,
+				6255910426303F4600715957 /* NanumSquare_acL.ttf */,
+				6255910526303F4600715957 /* NanumSquare_acR.ttf */,
+				6255910826303F4700715957 /* SDSwaggerTTF.ttf */,
+				6238A28B2626FE400052AEB0 /* No Virus.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		6267830B26157DE200EED0C5 = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +94,7 @@
 				6267832526157DE400EED0C5 /* LaunchScreen.storyboard */,
 				6267832826157DE400EED0C5 /* Info.plist */,
 				6267832026157DE200EED0C5 /* SmartFarm.xcdatamodeld */,
-				6238A28B2626FE400052AEB0 /* No Virus.ttf */,
+				6255910F26303F5200715957 /* fonts */,
 			);
 			path = SmartFarm;
 			sourceTree = "<group>";
@@ -130,10 +156,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6255910D26303F4700715957 /* SDSwaggerTTF.ttf in Resources */,
+				6255910A26303F4700715957 /* NanumSquare_acR.ttf in Resources */,
 				6267832726157DE400EED0C5 /* LaunchScreen.storyboard in Resources */,
 				6267832426157DE400EED0C5 /* Assets.xcassets in Resources */,
+				6255910B26303F4700715957 /* NanumSquare_acEB.ttf in Resources */,
+				6255910C26303F4700715957 /* NanumSquare_acB.ttf in Resources */,
+				625591122630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf in Resources */,
 				6238A28C2626FE400052AEB0 /* No Virus.ttf in Resources */,
 				6267831F26157DE200EED0C5 /* Main.storyboard in Resources */,
+				6255910926303F4700715957 /* NanumSquare_acL.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
