@@ -21,6 +21,7 @@
 		6267832226157DE200EED0C5 /* SmartFarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6267832026157DE200EED0C5 /* SmartFarm.xcdatamodeld */; };
 		6267832426157DE400EED0C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6267832326157DE400EED0C5 /* Assets.xcassets */; };
 		6267832726157DE400EED0C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6267832526157DE400EED0C5 /* LaunchScreen.storyboard */; };
+		62984156263973CB009C496D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62984155263973CB009C496D /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6267832326157DE400EED0C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6267832626157DE400EED0C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6267832826157DE400EED0C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62984155263973CB009C496D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				6267831726157DE200EED0C5 /* AppDelegate.swift */,
 				6267831926157DE200EED0C5 /* SceneDelegate.swift */,
 				6267831B26157DE200EED0C5 /* ViewController.swift */,
+				62984155263973CB009C496D /* MainCell.swift */,
 				6267831D26157DE200EED0C5 /* Main.storyboard */,
 				6267832326157DE400EED0C5 /* Assets.xcassets */,
 				6267832526157DE400EED0C5 /* LaunchScreen.storyboard */,
@@ -180,6 +183,7 @@
 				6267831826157DE200EED0C5 /* AppDelegate.swift in Sources */,
 				6267831A26157DE200EED0C5 /* SceneDelegate.swift in Sources */,
 				6267832226157DE200EED0C5 /* SmartFarm.xcdatamodeld in Sources */,
+				62984156263973CB009C496D /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

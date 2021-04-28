@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,8 +43,8 @@
                                         <rect key="frame" x="22" y="90" width="370" height="435"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="HSF-Bq-sIu">
-                                                <rect key="frame" x="0.0" y="28" width="370" height="70"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="HSF-Bq-sIu" customClass="MainCell" customModule="SmartFarm" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="24.5" width="370" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HSF-Bq-sIu" id="rUt-Wi-LdC">
                                                     <rect key="frame" x="0.0" y="0.0" width="370" height="70"/>
@@ -53,7 +53,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HT6-bD-wuN">
                                                             <rect key="frame" x="270" y="15" width="80" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUX-EP-9aj">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUX-EP-9aj">
                                                                     <rect key="frame" x="23" y="12" width="34" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="DXMSubtitlesM-KSCpc-EUC-H" family="DX영화자막" pointSize="14"/>
                                                                     <nil key="textColor"/>
@@ -76,8 +76,8 @@
                                                                 <constraint firstAttribute="height" constant="50" id="OTU-xL-LBE"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWM-zQ-nRO">
-                                                            <rect key="frame" x="107" y="24.5" width="32" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWM-zQ-nRO">
+                                                            <rect key="frame" x="107" y="24.5" width="30.5" height="21"/>
                                                             <fontDescription key="fontDescription" name="DXMSubtitlesM-KSCpc-EUC-H" family="DX영화자막" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -92,6 +92,10 @@
                                                         <constraint firstItem="3tV-Xy-rbh" firstAttribute="leading" secondItem="rUt-Wi-LdC" secondAttribute="leading" constant="20" symbolic="YES" id="w03-pW-1ew"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="jWM-zQ-nRO" id="vFe-7D-Pc9"/>
+                                                    <outlet property="valueLabel" destination="RUX-EP-9aj" id="tzI-h1-V2D"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>

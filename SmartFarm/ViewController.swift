@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    let titleArr: [String] = ["수분", "온도", "햇빛", "카메라"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,11 +26,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainCell
+        cell.titleLabel.text = titleArr[indexPath.row]
         return cell
     }
     
