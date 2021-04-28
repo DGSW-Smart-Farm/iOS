@@ -11,6 +11,7 @@ class MainCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var waveView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
