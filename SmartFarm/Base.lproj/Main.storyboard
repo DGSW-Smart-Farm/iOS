@@ -94,6 +94,7 @@
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="titleLabel" destination="jWM-zQ-nRO" id="vFe-7D-Pc9"/>
+                                                    <outlet property="valueBox" destination="HT6-bD-wuN" id="FTH-qk-vq7"/>
                                                     <outlet property="valueLabel" destination="RUX-EP-9aj" id="tzI-h1-V2D"/>
                                                     <outlet property="waveView" destination="3tV-Xy-rbh" id="D02-FR-ynR"/>
                                                 </connections>
