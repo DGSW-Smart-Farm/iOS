@@ -71,20 +71,9 @@
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tV-Xy-rbh">
                                                             <rect key="frame" x="20" y="10" width="50" height="50"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water icon" translatesAutoresizingMaskIntoConstraints="NO" id="cHp-p9-mVX">
-                                                                    <rect key="frame" x="14" y="9.5" width="22" height="31"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="31" id="4p2-Gq-ZSl"/>
-                                                                        <constraint firstAttribute="width" constant="22" id="E7w-XZ-LWa"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                            </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="3Fe-Pg-vcN"/>
-                                                                <constraint firstItem="cHp-p9-mVX" firstAttribute="centerX" secondItem="3tV-Xy-rbh" secondAttribute="centerX" id="9jB-BH-iQ0"/>
                                                                 <constraint firstAttribute="height" constant="50" id="OTU-xL-LBE"/>
-                                                                <constraint firstItem="cHp-p9-mVX" firstAttribute="centerY" secondItem="3tV-Xy-rbh" secondAttribute="centerY" id="qGz-1o-6LI"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWM-zQ-nRO">
@@ -176,7 +165,6 @@
     <resources>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="mainBg" width="542" height="478"/>
-        <image name="water icon" width="22" height="31"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
