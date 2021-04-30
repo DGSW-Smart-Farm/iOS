@@ -8,6 +8,7 @@
 import UIKit
 
 import WaveAnimationView
+import SkeletonView
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     let titleArr: [String] = ["수분", "온도", "햇빛", "카메라"]
     let iconArr: [String] = ["water icon", "temperature icon", "light icon", "camera icon"]
     let colorArr: [UIColor] = [#colorLiteral(red: 0, green: 0.8274509804, blue: 1, alpha: 0.6), #colorLiteral(red: 0.9843137255, green: 0.3725490196, blue: 0.3725490196, alpha: 0.8), #colorLiteral(red: 1, green: 0.3607843137, blue: 0.2235294118, alpha: 0.7), #colorLiteral(red: 0.4156862745, green: 0.3254901961, blue: 0.3058823529, alpha: 0.8)]
+    var dataArr: [String]? = ["50%", "24도", "355mm", "더보기"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -53,7 +56,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         // wave animation 추가
         wave = WaveAnimationView(frame: CGRect(origin: .zero, size: cell.waveView.bounds.size), color: colorArr[indexPath.row])
-        wave.progress = 0.4
+        wave.progress = 0.7
         wave.tag = indexPath.row
         cell.waveView.addSubview(wave)
         cell.waveView.sendSubviewToBack(wave)
@@ -61,13 +64,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         // cell title추가
         cell.titleLabel.text = titleArr[indexPath.row]
+        if dataArr?[indexPath.row] == nil {
+            let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
+            cell.valueLabel.showAnimatedGradientSkeleton(usingGradient: SkeletonGradient(baseColor: UIColor.clouds), animation: animation, transition: .crossDissolve(0.25))
+        }
+        else {
+            cell.valueLabel.text = dataArr?[indexPath.row]
+            cell.valueLabel.hideSkeleton(transition: .crossDissolve(0.25))
+        }
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
-    }
-    func createwave(completion: () -> Void) {
-        completion()
     }
 }
