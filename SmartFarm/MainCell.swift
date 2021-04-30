@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SkeletonView
+
 class MainCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -14,15 +16,18 @@ class MainCell: UITableViewCell {
     @IBOutlet weak var waveView: UIView!
     @IBOutlet weak var valueBox: UIView!
     
+    let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // valueBox 스켈레톤 처리
+        valueBox.showAnimatedGradientSkeleton(usingGradient: SkeletonGradient(baseColor: #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8196078431, alpha: 1), secondaryColor: #colorLiteral(red: 0.7058823529, green: 0.7058823529, blue: 0.7058823529, alpha: 1)), animation: animation, transition: .crossDissolve(0.25))
+        valueLabel.text = ""
         
         // cell icon을 원 형태로 변경
         waveView.layer.cornerRadius = waveView.layer.frame.height / 2
         waveView.clipsToBounds = true
-        
-        // valueBox의 모서리 라운딩
-        valueBox.layer.cornerRadius = 7
         // Initialization code
     }
 

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     let titleArr: [String] = ["수분", "온도", "햇빛", "카메라"]
     let iconArr: [String] = ["water icon", "temperature icon", "light icon", "camera icon"]
     let colorArr: [UIColor] = [#colorLiteral(red: 0, green: 0.8274509804, blue: 1, alpha: 0.6), #colorLiteral(red: 0.9843137255, green: 0.3725490196, blue: 0.3725490196, alpha: 0.8), #colorLiteral(red: 1, green: 0.3607843137, blue: 0.2235294118, alpha: 0.7), #colorLiteral(red: 0.4156862745, green: 0.3254901961, blue: 0.3058823529, alpha: 0.8)]
-    var dataArr: [String]? = ["50%", "24도", "355mm", "더보기"]
+    var dataArr: [String]?// = ["50%", "24도", "355mm", "더보기"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,15 +62,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.waveView.sendSubviewToBack(wave)
         wave.startAnimation()
         
-        // cell title추가
+        // title 추가
         cell.titleLabel.text = titleArr[indexPath.row]
-        if dataArr?[indexPath.row] == nil {
-            let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
-            cell.valueLabel.showAnimatedGradientSkeleton(usingGradient: SkeletonGradient(baseColor: UIColor.clouds), animation: animation, transition: .crossDissolve(0.25))
-        }
-        else {
+        
+        // 데이터가 들어왔을경우 스켈레톤 해제
+        if dataArr?[indexPath.row] != nil {
             cell.valueLabel.text = dataArr?[indexPath.row]
-            cell.valueLabel.hideSkeleton(transition: .crossDissolve(0.25))
+            cell.valueBox.hideSkeleton(transition: .crossDissolve(0.25))
+            cell.valueBox.layer.cornerRadius = 7
         }
         return cell
     }
