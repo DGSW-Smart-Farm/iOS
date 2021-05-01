@@ -14,6 +14,7 @@
 		6255910C26303F4700715957 /* NanumSquare_acB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6255910726303F4700715957 /* NanumSquare_acB.ttf */; };
 		6255910D26303F4700715957 /* SDSwaggerTTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6255910826303F4700715957 /* SDSwaggerTTF.ttf */; };
 		625591122630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 625591112630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf */; };
+		6264635A263D740500E037BC /* setClearNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62646359263D740500E037BC /* setClearNavigationBar.swift */; };
 		6267831826157DE200EED0C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267831726157DE200EED0C5 /* AppDelegate.swift */; };
 		6267831A26157DE200EED0C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267831926157DE200EED0C5 /* SceneDelegate.swift */; };
 		6267831C26157DE200EED0C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267831B26157DE200EED0C5 /* ViewController.swift */; };
@@ -22,6 +23,9 @@
 		6267832426157DE400EED0C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6267832326157DE400EED0C5 /* Assets.xcassets */; };
 		6267832726157DE400EED0C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6267832526157DE400EED0C5 /* LaunchScreen.storyboard */; };
 		62984156263973CB009C496D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62984155263973CB009C496D /* MainCell.swift */; };
+		62CDBDAA263D7713009D7529 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62CDBDA7263D7713009D7529 /* NanumMyeongjo.ttf */; };
+		62CDBDAB263D7713009D7529 /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62CDBDA8263D7713009D7529 /* NanumMyeongjoBold.ttf */; };
+		62CDBDAC263D7713009D7529 /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62CDBDA9263D7713009D7529 /* NanumMyeongjoExtraBold.ttf */; };
 		A61B0037920968ECD36D00B9 /* Pods_SmartFarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CC068D6FF320CB7A05EE1F /* Pods_SmartFarm.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,7 @@
 		6255910726303F4700715957 /* NanumSquare_acB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acB.ttf; sourceTree = "<group>"; };
 		6255910826303F4700715957 /* SDSwaggerTTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDSwaggerTTF.ttf; sourceTree = "<group>"; };
 		625591112630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DXMSubtitlesM-KSCpc-EUC-H.ttf"; sourceTree = "<group>"; };
+		62646359263D740500E037BC /* setClearNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setClearNavigationBar.swift; sourceTree = "<group>"; };
 		6267831426157DE200EED0C5 /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6267831726157DE200EED0C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6267831926157DE200EED0C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +48,9 @@
 		6267832626157DE400EED0C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6267832826157DE400EED0C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62984155263973CB009C496D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		62CDBDA7263D7713009D7529 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
+		62CDBDA8263D7713009D7529 /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
+		62CDBDA9263D7713009D7529 /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
 		C6CC068D6FF320CB7A05EE1F /* Pods_SmartFarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFB33FFFBF395E8063156E9 /* Pods-SmartFarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarm.debug.xcconfig"; path = "Target Support Files/Pods-SmartFarm/Pods-SmartFarm.debug.xcconfig"; sourceTree = "<group>"; };
 		EA3414E88D2621AD6B52D2D0 /* Pods-SmartFarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarm.release.xcconfig"; path = "Target Support Files/Pods-SmartFarm/Pods-SmartFarm.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +75,9 @@
 				625591112630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf */,
 				6255910626303F4700715957 /* NanumSquare_acEB.ttf */,
 				6255910426303F4600715957 /* NanumSquare_acL.ttf */,
+				62CDBDA7263D7713009D7529 /* NanumMyeongjo.ttf */,
+				62CDBDA8263D7713009D7529 /* NanumMyeongjoBold.ttf */,
+				62CDBDA9263D7713009D7529 /* NanumMyeongjoExtraBold.ttf */,
 				6255910526303F4600715957 /* NanumSquare_acR.ttf */,
 				6255910826303F4700715957 /* SDSwaggerTTF.ttf */,
 				6238A28B2626FE400052AEB0 /* No Virus.ttf */,
@@ -105,6 +116,7 @@
 				6267832826157DE400EED0C5 /* Info.plist */,
 				6267832026157DE200EED0C5 /* SmartFarm.xcdatamodeld */,
 				6255910F26303F5200715957 /* fonts */,
+				62646359263D740500E037BC /* setClearNavigationBar.swift */,
 			);
 			path = SmartFarm;
 			sourceTree = "<group>";
@@ -186,12 +198,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6255910D26303F4700715957 /* SDSwaggerTTF.ttf in Resources */,
+				62CDBDAB263D7713009D7529 /* NanumMyeongjoBold.ttf in Resources */,
+				62CDBDAC263D7713009D7529 /* NanumMyeongjoExtraBold.ttf in Resources */,
 				6255910A26303F4700715957 /* NanumSquare_acR.ttf in Resources */,
 				6267832726157DE400EED0C5 /* LaunchScreen.storyboard in Resources */,
 				6267832426157DE400EED0C5 /* Assets.xcassets in Resources */,
 				6255910B26303F4700715957 /* NanumSquare_acEB.ttf in Resources */,
 				6255910C26303F4700715957 /* NanumSquare_acB.ttf in Resources */,
 				625591122630414300715957 /* DXMSubtitlesM-KSCpc-EUC-H.ttf in Resources */,
+				62CDBDAA263D7713009D7529 /* NanumMyeongjo.ttf in Resources */,
 				6238A28C2626FE400052AEB0 /* No Virus.ttf in Resources */,
 				6267831F26157DE200EED0C5 /* Main.storyboard in Resources */,
 				6255910926303F4700715957 /* NanumSquare_acL.ttf in Resources */,
@@ -247,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6264635A263D740500E037BC /* setClearNavigationBar.swift in Sources */,
 				6267831C26157DE200EED0C5 /* ViewController.swift in Sources */,
 				6267831826157DE200EED0C5 /* AppDelegate.swift in Sources */,
 				6267831A26157DE200EED0C5 /* SceneDelegate.swift in Sources */,

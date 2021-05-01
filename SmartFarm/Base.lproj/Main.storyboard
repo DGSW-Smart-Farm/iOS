@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xqg-cE-dlz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -111,6 +111,7 @@
                                                     <outlet property="valueBox" destination="HT6-bD-wuN" id="FTH-qk-vq7"/>
                                                     <outlet property="valueLabel" destination="RUX-EP-9aj" id="tzI-h1-V2D"/>
                                                     <outlet property="waveView" destination="3tV-Xy-rbh" id="D02-FR-ynR"/>
+                                                    <segue destination="i19-O9-i5y" kind="show" id="Kb0-S7-e8c"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -136,17 +137,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6j-5K-q27">
-                                <rect key="frame" x="20" y="63" width="26" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="7ji-WQ-F57"/>
-                                    <constraint firstAttribute="width" constant="26" id="lfW-FA-Qhw"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="line.horizontal.3" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="medium" weight="semibold"/>
-                                </state>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -160,13 +150,26 @@
                             <constraint firstItem="QOP-tf-irN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="hS4-L3-Ift"/>
                             <constraint firstItem="H07-lr-F6k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="iqv-Yq-dXd"/>
                             <constraint firstItem="5Ua-JP-GAK" firstAttribute="top" secondItem="QOP-tf-irN" secondAttribute="bottom" constant="-30" id="j8z-cH-hN2"/>
-                            <constraint firstItem="d6j-5K-q27" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jub-l9-dcD"/>
                             <constraint firstItem="QOP-tf-irN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rAL-ZZ-sSy"/>
                             <constraint firstItem="QOP-tf-irN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="8:20" id="rRL-Rg-Que"/>
-                            <constraint firstItem="d6j-5K-q27" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="s5e-tY-S5U"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b6a-6C-8Qe"/>
+                    <navigationItem key="navigationItem" id="b6a-6C-8Qe">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="yEU-rS-klR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d6j-5K-q27">
+                                <rect key="frame" x="20" y="0.0" width="32.5" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7ji-WQ-F57"/>
+                                    <constraint firstAttribute="width" constant="26" id="lfW-FA-Qhw"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="line.horizontal.3" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="medium" weight="semibold"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backView" destination="5Ua-JP-GAK" id="u4c-Q4-ibv"/>
                         <outlet property="titleLabel" destination="H07-lr-F6k" id="5yH-Vr-Edb"/>
@@ -174,12 +177,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+            <point key="canvasLocation" x="1849.2753623188407" y="83.705357142857139"/>
+        </scene>
+        <!--SmartFarm-->
+        <scene sceneID="Enh-p5-26l">
+            <objects>
+                <viewController id="i19-O9-i5y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjg-IY-qhF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water image" translatesAutoresizingMaskIntoConstraints="NO" id="Gxk-Ng-PO3">
+                                <rect key="frame" x="22" y="103" width="370" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gxk-Ng-PO3" secondAttribute="height" multiplier="370:221" id="CSL-qI-Ypv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eXU-Y2-9ey"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gxk-Ng-PO3" firstAttribute="top" secondItem="eXU-Y2-9ey" secondAttribute="top" constant="15" id="7wC-Y8-cDz"/>
+                            <constraint firstItem="Gxk-Ng-PO3" firstAttribute="centerX" secondItem="bjg-IY-qhF" secondAttribute="centerX" id="YgD-o2-lKN"/>
+                            <constraint firstItem="Gxk-Ng-PO3" firstAttribute="leading" secondItem="eXU-Y2-9ey" secondAttribute="leading" constant="22" id="nfo-SI-mGY"/>
+                            <constraint firstItem="eXU-Y2-9ey" firstAttribute="trailing" secondItem="Gxk-Ng-PO3" secondAttribute="trailing" constant="22" id="quD-GA-qLX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SmartFarm" id="5La-Mc-2Xb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="niF-ne-rsh"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uzy-DF-aC1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634.7826086956525" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N5y-ko-uc3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xqg-cE-dlz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eHv-o5-cTJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.23137254901960785" green="0.37647058823529411" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" red="0.23137254901960785" green="0.37647058823529411" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" red="0.23137254901960785" green="0.37647058823529411" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uak-1Z-hOO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pan-dJ-dfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="84"/>
         </scene>
     </scenes>
     <resources>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="mainBg" width="542" height="478"/>
+        <image name="water image" width="2731" height="1621"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
