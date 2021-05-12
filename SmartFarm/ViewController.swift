@@ -37,30 +37,35 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = cell as! MainCell
-        
-        // cell이 사라질 때 subView들을 다 제거해줌
-        cell.waveView.subviews.forEach {$0.removeFromSuperview()}
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // MainCell 연결
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainCell
         
         // icon 추가
-        icon = UIImageView(image: UIImage(named: "\(iconArr[indexPath.row])"))
-        icon.frame = CGRect(origin: .zero, size: cell.waveView.frame.size)
-        icon.tag = indexPath.row
-        cell.waveView.addSubview(icon)
+        var icon = cell.waveView.viewWithTag(1) as? UIImageView
+        if (icon == nil) {
+            icon = UIImageView(image: UIImage(named: "\(iconArr[indexPath.row])"))
+            icon!.frame = CGRect(origin: .zero, size: cell.waveView.frame.size)
+            icon!.tag = 1
+            cell.waveView.addSubview(icon!)
+        } else {
+            icon!.image = UIImage(named: "\(iconArr[indexPath.row])")
+        }
         
-        // wave animation 추가
-        wave = WaveAnimationView(frame: CGRect(origin: .zero, size: cell.waveView.bounds.size), color: colorArr[indexPath.row])
-        wave.progress = 0.7
-        wave.tag = indexPath.row
-        cell.waveView.addSubview(wave)
-        cell.waveView.sendSubviewToBack(wave)
-        wave.startAnimation()
+        var wave = cell.waveView.viewWithTag(2) as? WaveAnimationView
+        if wave == nil {
+            // wave animation 추가
+            wave = WaveAnimationView(frame: CGRect(origin: .zero, size: cell.waveView.bounds.size), color: colorArr[indexPath.row])
+            wave!.progress = 0.5
+            wave!.tag = 2
+            cell.waveView.addSubview(wave!)
+            cell.waveView.sendSubviewToBack(wave!)
+            wave!.startAnimation()
+        } else {
+            wave = WaveAnimationView(frame: CGRect(origin: .zero, size: cell.waveView.bounds.size),color: colorArr[indexPath.row])
+        }
+
         
         // title 추가
         cell.titleLabel.text = titleArr[indexPath.row]
