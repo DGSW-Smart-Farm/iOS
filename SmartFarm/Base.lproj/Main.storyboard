@@ -212,7 +212,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-Pl-zgt">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="233"/>
                                         <connections>
-                                            <segue destination="ofp-Nf-PAc" kind="embed" id="QMG-Ha-VBX"/>
+                                            <segue destination="rFv-do-ywQ" kind="embed" id="WvW-V1-WQb"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h41-jS-LvD">
@@ -395,7 +395,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="doButton" destination="Egm-a5-hvM" id="SF8-nq-WlM"/>
+                        <outlet property="doButton" destination="Egm-a5-hvM" id="Eq1-ip-teR"/>
                         <outlet property="picker" destination="wUM-Qi-ftE" id="qdj-DV-oKX"/>
                     </connections>
                 </viewController>
@@ -404,19 +404,110 @@
             <point key="canvasLocation" x="3511.594202898551" y="291.62946428571428"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Vpz-3M-djG">
+        <scene sceneID="qQ1-E0-JrZ">
             <objects>
-                <viewController id="ofp-Nf-PAc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="caD-9H-Mbz">
+                <viewController id="rFv-do-ywQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AnK-oc-gli">
                         <rect key="frame" x="0.0" y="0.0" width="370" height="233"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="QEX-Sr-B5j"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-hd-hLc">
+                                <rect key="frame" x="20" y="20" width="80" height="25"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-bd-Qat">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xb-nI-k4y">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="12.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3o-pb-tpc">
+                                                <rect key="frame" x="0.0" y="12.5" width="80" height="12.5"/>
+                                                <color key="backgroundColor" red="0.46666666670000001" green="0.67843137249999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="J3o-pb-tpc" firstAttribute="height" secondItem="7Xb-nI-k4y" secondAttribute="height" multiplier="1:1" id="GJr-Jf-uVG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수분현황" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbx-eC-Fyh">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
+                                        <fontDescription key="fontDescription" name="NanumSquare_acB" family="NanumSquare_ac" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="hbx-eC-Fyh" firstAttribute="leading" secondItem="BAH-hd-hLc" secondAttribute="leading" id="2gS-R9-ZhW"/>
+                                    <constraint firstAttribute="trailing" secondItem="hbx-eC-Fyh" secondAttribute="trailing" id="HnR-Rw-s7v"/>
+                                    <constraint firstAttribute="bottom" secondItem="hbx-eC-Fyh" secondAttribute="bottom" id="OD4-S7-mDH"/>
+                                    <constraint firstAttribute="height" constant="25" id="Ri6-oS-gbu"/>
+                                    <constraint firstAttribute="trailing" secondItem="vWO-bd-Qat" secondAttribute="trailing" id="UST-FL-vTz"/>
+                                    <constraint firstAttribute="bottom" secondItem="vWO-bd-Qat" secondAttribute="bottom" id="dvt-ak-wE1"/>
+                                    <constraint firstItem="vWO-bd-Qat" firstAttribute="top" secondItem="BAH-hd-hLc" secondAttribute="top" id="hjl-87-9pw"/>
+                                    <constraint firstAttribute="width" constant="80" id="vqV-4M-KM8"/>
+                                    <constraint firstItem="vWO-bd-Qat" firstAttribute="leading" secondItem="BAH-hd-hLc" secondAttribute="leading" id="xat-Gx-0aR"/>
+                                    <constraint firstItem="hbx-eC-Fyh" firstAttribute="top" secondItem="BAH-hd-hLc" secondAttribute="top" id="zcI-0O-F4h"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-FS-BCB" customClass="KDCircularProgress" customModule="KDCircularProgress">
+                                <rect key="frame" x="30" y="65" width="148" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHA-h4-BXS">
+                                        <rect key="frame" x="53" y="63" width="42.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="NanumSquare_acB" family="NanumSquare_ac" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ycv-FS-BCB" secondAttribute="height" multiplier="1:1" id="YCd-xM-nEH"/>
+                                    <constraint firstItem="NHA-h4-BXS" firstAttribute="centerX" secondItem="ycv-FS-BCB" secondAttribute="centerX" id="lnH-yZ-XG0"/>
+                                    <constraint firstItem="NHA-h4-BXS" firstAttribute="centerY" secondItem="ycv-FS-BCB" secondAttribute="centerY" id="t2o-av-86Z"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowAmount">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" red="0.46666666670000001" green="0.67843137249999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressThickness">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uq8-vZ-qix"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uq8-vZ-qix" firstAttribute="bottom" secondItem="ycv-FS-BCB" secondAttribute="bottom" constant="20" id="CFB-aJ-ux0"/>
+                            <constraint firstItem="ycv-FS-BCB" firstAttribute="leading" secondItem="uq8-vZ-qix" secondAttribute="leading" constant="30" id="Zj9-as-vLA"/>
+                            <constraint firstItem="ycv-FS-BCB" firstAttribute="top" secondItem="AnK-oc-gli" secondAttribute="top" constant="65" id="iCK-Mv-paw"/>
+                            <constraint firstItem="BAH-hd-hLc" firstAttribute="top" secondItem="AnK-oc-gli" secondAttribute="top" constant="20" symbolic="YES" id="mXg-L3-b6l"/>
+                            <constraint firstItem="BAH-hd-hLc" firstAttribute="leading" secondItem="AnK-oc-gli" secondAttribute="leading" constant="20" symbolic="YES" id="vVX-rk-VWa"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zks-ZP-7WM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4P-FB-Ddy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3512" y="101"/>
+            <point key="canvasLocation" x="3511.594202898551" y="64.620535714285708"/>
         </scene>
     </scenes>
     <resources>
