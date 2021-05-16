@@ -186,7 +186,7 @@
         <!--SmartFarm-->
         <scene sceneID="Enh-p5-26l">
             <objects>
-                <viewController id="i19-O9-i5y" sceneMemberID="viewController">
+                <viewController id="i19-O9-i5y" customClass="DetailVC" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bjg-IY-qhF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +202,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -402,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evU-MB-DbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3511.594202898551" y="291.62946428571428"/>
+            <point key="canvasLocation" x="3512" y="283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qQ1-E0-JrZ">
@@ -453,7 +453,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-FS-BCB" customClass="KDCircularProgress" customModule="KDCircularProgress">
-                                <rect key="frame" x="30" y="65" width="146.5" height="146.5"/>
+                                <rect key="frame" x="25" y="65" width="146.5" height="146.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHA-h4-BXS">
                                         <rect key="frame" x="52" y="62" width="42.5" height="22.5"/>
@@ -494,21 +494,45 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ySv-Lu-pbK">
+                                <rect key="frame" x="181.5" y="65" width="158.5" height="146.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수분이 부족해요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VS-wj-AaR">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="73.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물주기 기능을 이용해 물을 주세요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Eh-me-LJl">
+                                        <rect key="frame" x="0.0" y="73.5" width="158.5" height="73"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3VS-wj-AaR" firstAttribute="height" secondItem="5Eh-me-LJl" secondAttribute="height" id="o6I-5b-mHn"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uq8-vZ-qix"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="ySv-Lu-pbK" secondAttribute="bottom" constant="20" id="2OS-UX-pqu"/>
+                            <constraint firstItem="ySv-Lu-pbK" firstAttribute="leading" secondItem="ycv-FS-BCB" secondAttribute="trailing" constant="10" id="9YO-S2-ods"/>
                             <constraint firstItem="uq8-vZ-qix" firstAttribute="bottom" secondItem="ycv-FS-BCB" secondAttribute="bottom" constant="20" id="CFB-aJ-ux0"/>
-                            <constraint firstItem="ycv-FS-BCB" firstAttribute="leading" secondItem="uq8-vZ-qix" secondAttribute="leading" constant="30" id="Zj9-as-vLA"/>
+                            <constraint firstItem="ycv-FS-BCB" firstAttribute="leading" secondItem="uq8-vZ-qix" secondAttribute="leading" constant="25" id="Zj9-as-vLA"/>
                             <constraint firstItem="ycv-FS-BCB" firstAttribute="top" secondItem="AnK-oc-gli" secondAttribute="top" constant="65" id="iCK-Mv-paw"/>
+                            <constraint firstItem="ySv-Lu-pbK" firstAttribute="top" secondItem="AnK-oc-gli" secondAttribute="top" constant="65" id="mNA-5t-IS2"/>
                             <constraint firstItem="BAH-hd-hLc" firstAttribute="top" secondItem="AnK-oc-gli" secondAttribute="top" constant="20" symbolic="YES" id="mXg-L3-b6l"/>
                             <constraint firstItem="BAH-hd-hLc" firstAttribute="leading" secondItem="AnK-oc-gli" secondAttribute="leading" constant="20" symbolic="YES" id="vVX-rk-VWa"/>
+                            <constraint firstAttribute="trailing" secondItem="ySv-Lu-pbK" secondAttribute="trailing" constant="30" id="x9B-hx-JTi"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4P-FB-Ddy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3511.594202898551" y="64.620535714285708"/>
+            <point key="canvasLocation" x="3511.594202898551" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
