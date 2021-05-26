@@ -404,10 +404,10 @@
             </objects>
             <point key="canvasLocation" x="3512" y="283"/>
         </scene>
-        <!--View Controller-->
+        <!--GraphVC-->
         <scene sceneID="qQ1-E0-JrZ">
             <objects>
-                <viewController id="rFv-do-ywQ" sceneMemberID="viewController">
+                <viewController id="rFv-do-ywQ" customClass="GraphVC" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AnK-oc-gli">
                         <rect key="frame" x="0.0" y="0.0" width="370" height="231.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,7 +474,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <real key="value" value="90"/>
+                                        <real key="value" value="-90"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="trackThickness">
                                         <real key="value" value="0.5"/>
@@ -482,7 +482,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="glowAmount">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
                                         <color key="value" red="0.46666666670000001" green="0.67843137249999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
@@ -529,6 +529,9 @@
                             <constraint firstAttribute="trailing" secondItem="ySv-Lu-pbK" secondAttribute="trailing" constant="30" id="x9B-hx-JTi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="graphView" destination="ycv-FS-BCB" id="GYw-Gj-TaQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4P-FB-Ddy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
