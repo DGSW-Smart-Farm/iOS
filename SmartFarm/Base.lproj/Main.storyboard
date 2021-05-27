@@ -283,7 +283,7 @@
             <objects>
                 <viewController id="jWY-du-Ljm" customClass="PickerVC" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zn4-d9-OBU">
-                        <rect key="frame" x="0.0" y="0.0" width="370" height="231.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="231"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-QT-cG5">
@@ -409,7 +409,7 @@
             <objects>
                 <viewController id="rFv-do-ywQ" customClass="GraphVC" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AnK-oc-gli">
-                        <rect key="frame" x="0.0" y="0.0" width="370" height="231.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="231"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-hd-hLc">
