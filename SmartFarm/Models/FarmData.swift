@@ -12,14 +12,18 @@ struct FarmData {
     let light: JSONValue
 
     static func requestData() -> FarmData {
-        var humidityValue = JSONValue()
-        var temperatureValue = JSONValue()
-        var lightValue = JSONValue()
+        var humidityValue: JSONValue = JSONValue()
+        var temperatureValue: JSONValue = JSONValue()
+        var lightValue: JSONValue = JSONValue()
         
         do{
             let json = try Utils.request(uri: "", params: "")
-            humidityValue.status = json["humidity_gnd"]["status"].boolValue
-            humidityValue.value = json["humidity_gnd"]["value"].doubleValue
+            humidityValue.status = json["humidity_gnd"]["status"].intValue
+            humidityValue.value = json["humidity_gnd"]["value"].intValue
+            temperatureValue.status = json["temp"]["status"].intValue
+            temperatureValue.value = json["temp"]["value"].intValue
+            lightValue.LEDStatus = json["led"]["status"].boolValue
+            lightValue.time = json["led"]["time"].intValue
         } catch let error {
             print(error)
         }
@@ -28,10 +32,12 @@ struct FarmData {
 }
 
 struct JSONValue {
-    var status: Bool?
-    var value: Double?
+    var status: Int?
+    var value: Int?
+    var LEDStatus: Bool?
+    var time: Int?
     
-    init(status:Bool? = nil, value: Double? = nil) {
+    init(status: Int? = nil, value: Int? = nil, LEDStatus: Bool? = nil, time: Int? = nil) {
         self.status = status
         self.value = value
     }
