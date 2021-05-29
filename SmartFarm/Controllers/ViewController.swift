@@ -28,6 +28,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         backView.layer.cornerRadius = 25
         titleLabel.adjustsFontSizeToFitWidth = true
+        
+        do {
+            try Utils.request(uri: "/v1/get_home", params: "") { data in
+                
+            }
+        } catch let error {
+            print(error)
+        }
     }
 
 }
