@@ -13,6 +13,7 @@ import SkeletonView
 class ViewController: UIViewController {
 
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
     
     var icon: UIImageView!
@@ -29,15 +30,27 @@ class ViewController: UIViewController {
         backView.layer.cornerRadius = 25
         titleLabel.adjustsFontSizeToFitWidth = true
         
-        do {
-            try Utils.request(uri: "/v1/get_home", params: "") { data in
-                
-            }
-        } catch let error {
-            print(error)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        networking() {
+            self.tableView.reloadData()
         }
     }
 
+}
+
+func networking(complition:@escaping () -> ()) -> Void {
+    do {
+        try Utils.request(uri: "/v1/get_home", params: "") { data in
+            var value: FarmData = FarmData()
+            value.humidity?.value = data["humidity"]["value"].intValue
+            value.temperature?.value = data["temp"]["value"].intValue
+            value.light?.LEDStatus = data["LED"]["value"].boolValue
+        }
+    } catch let error {
+        print(error)
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
