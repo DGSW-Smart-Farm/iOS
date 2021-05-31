@@ -9,9 +9,9 @@ import Alamofire
 import SwiftyJSON
 
 struct Utils {
-    static func request(uri: String, params: String, completion: @escaping (JSON) -> Void) throws {
-        let baseURL = "10.80.163.68:8000/v1"
-        let url:String = baseURL + uri + params
+    static func request(uri: String, completion: @escaping (JSON) -> Void) throws {
+        let baseURL = "http://10.80.163.68:8000/v1"
+        let url:String = baseURL + uri
         var APIError: Error?
         
         var result: JSON!

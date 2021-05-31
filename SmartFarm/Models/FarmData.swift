@@ -7,15 +7,15 @@
 import SwiftyJSON
 
 struct FarmData {
-    var humidity: JSONValue?
-    var temperature: JSONValue?
-    var light: JSONValue?
+    var humidity: JSONValue
+    var temperature: JSONValue
+    var light: JSONValue
     
-    init(humidity: JSONValue? = nil, temperature: JSONValue? = nil, light: JSONValue? = nil) {
-        self.humidity = humidity
-        self.temperature = temperature
-        self.light = light
-    }
+//    init(humidity: JSONValue? = nil, temperature: JSONValue? = nil, light: JSONValue? = nil) {
+//        self.humidity = humidity
+//        self.temperature = temperature
+//        self.light = light
+//    }
 }
 
 struct JSONValue {
