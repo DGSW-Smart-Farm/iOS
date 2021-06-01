@@ -33,12 +33,13 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        dataArr = []
+        self.tableView.reloadData()
         networking() { value in
             self.dataArr.append("\(value.humidity.value ?? 0)%")
             self.dataArr.append("\(value.temperature.value ?? 0)도")
             self.dataArr.append("\(value.light.LEDStatus ?? false)")
             self.dataArr.append("더보기")
-            print(self.dataArr)
             self.tableView.reloadData()
         }
     }
@@ -102,6 +103,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.valueLabel.text = dataArr[indexPath.row]
             cell.valueBox.hideSkeleton(transition: .crossDissolve(0.25))
             cell.valueBox.layer.cornerRadius = 7
+        }
+        else {
+            cell.valueLabel.text = ""
+            let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
+            cell.valueBox.showAnimatedGradientSkeleton(usingGradient: SkeletonGradient(baseColor: #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8196078431, alpha: 1), secondaryColor: #colorLiteral(red: 0.7058823529, green: 0.7058823529, blue: 0.7058823529, alpha: 1)), animation: animation, transition: .crossDissolve(0.25))
         }
         return cell
     }

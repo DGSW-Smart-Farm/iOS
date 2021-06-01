@@ -15,7 +15,7 @@ struct Utils {
         var APIError: Error?
         
         var result: JSON!
-        AF.request(url).responseJSON {
+        AF.request(url, method: .get).responseJSON {
             switch $0.result {
             case .success(let value):
                 result = JSON(value)
