@@ -14,10 +14,6 @@ class DetailVC: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        NotificationCenter.default.post(name: .viewAppear, object: String())
-    }
 
     /*
     // MARK: - Navigation
@@ -29,8 +25,4 @@ class DetailVC: UIViewController {
     }
     */
 
-}
-
-extension Notification.Name {
-    static let viewAppear = Notification.Name("viewappear")
 }

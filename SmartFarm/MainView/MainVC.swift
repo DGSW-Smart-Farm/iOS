@@ -10,7 +10,7 @@ import UIKit
 import WaveAnimationView
 import SkeletonView
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -60,8 +60,10 @@ func networking(complition:@escaping (FarmData) -> ()) -> Void {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
+extension MainVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titleArr.count
     }

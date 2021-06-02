@@ -13,12 +13,21 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var doButton: UIButton!
     
     let boolArr: [String] = ["On", "Off"]
+    var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         doButton.layer.cornerRadius = 5
+        
+        print("pickerView loaded")
         // Do any additional setup after loading the view.
     }
+    
+    @objc func updateUI(_ notification: Notification) {
+        let cellNum = notification.object
+        print(cellNum)
+    }
+    
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
