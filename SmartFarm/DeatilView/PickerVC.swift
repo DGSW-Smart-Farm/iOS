@@ -19,13 +19,9 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         super.viewDidLoad()
         doButton.layer.cornerRadius = 5
         
+//        print(index)
         print("pickerView loaded")
         // Do any additional setup after loading the view.
-    }
-    
-    @objc func updateUI(_ notification: Notification) {
-        let cellNum = notification.object
-        print(cellNum)
     }
     
     

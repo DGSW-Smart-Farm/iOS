@@ -29,3 +29,20 @@ struct Utils {
         }
     }
 }
+
+extension Int {
+    mutating func index() -> String {
+        switch self {
+        case 0:
+            return "수분"
+        case 1:
+            return "온도"
+        case 2:
+            return "LED"
+        case 3:
+            return "카메라"
+        default:
+            return "에러"
+        }
+    }
+}

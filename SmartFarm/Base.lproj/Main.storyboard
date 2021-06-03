@@ -177,7 +177,7 @@
                         <outlet property="backView" destination="5Ua-JP-GAK" id="u4c-Q4-ibv"/>
                         <outlet property="tableView" destination="IHp-h2-9No" id="zLF-A2-RPH"/>
                         <outlet property="titleLabel" destination="H07-lr-F6k" id="5yH-Vr-Edb"/>
-                        <segue destination="i19-O9-i5y" kind="show" identifier="showDetail" id="KlY-UZ-Svp"/>
+                        <segue destination="i19-O9-i5y" kind="show" identifier="showDetail" id="eVy-Se-Uor"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
