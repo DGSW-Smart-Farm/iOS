@@ -532,6 +532,7 @@
                     </view>
                     <connections>
                         <outlet property="graphView" destination="ycv-FS-BCB" id="GYw-Gj-TaQ"/>
+                        <outlet property="nameLabel" destination="hbx-eC-Fyh" id="2Ry-Xh-3iF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4P-FB-Ddy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

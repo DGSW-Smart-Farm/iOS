@@ -30,8 +30,18 @@ struct Utils {
     }
 }
 
+class DetailViewName {
+    static let shared = DetailViewName()
+    
+    var name: String = ""
+    var color: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    var subname: String = ""
+    
+    private init() {}
+}
+
 extension Int {
-    mutating func index() -> String {
+    mutating func indexName() -> String {
         switch self {
         case 0:
             return "수분"

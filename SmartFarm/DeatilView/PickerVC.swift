@@ -11,6 +11,7 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var doButton: UIButton!
+    var viewName: String = ""
     
     let boolArr: [String] = ["On", "Off"]
     var index: Int?
@@ -19,11 +20,9 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         super.viewDidLoad()
         doButton.layer.cornerRadius = 5
         
-//        print(index)
-        print("pickerView loaded")
+        viewName = DetailViewName.shared.name
         // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         

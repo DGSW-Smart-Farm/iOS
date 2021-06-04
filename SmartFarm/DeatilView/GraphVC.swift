@@ -10,8 +10,10 @@ import UIKit
 import KDCircularProgress
 
 class GraphVC: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var graphView: KDCircularProgress!
+    var viewName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,10 @@ class GraphVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewName = DetailViewName.shared.name
+        nameLabel.text = "\(DetailViewName.shared.name)현황"
+    }
     override func viewDidAppear(_ animated: Bool) {
         animateGraph()
     }

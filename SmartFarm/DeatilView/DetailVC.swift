@@ -14,7 +14,7 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if var index = index {
-            print(index.index())
+            DetailViewName.shared.name = index.indexName()
         }
         // Do any additional setup after loading the view.
     }
