@@ -11,7 +11,11 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var doButton: UIButton!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
     var viewName: String = ""
+    var viewColor: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    var viewSubName: String = ""
     
     let boolArr: [String] = ["On", "Off"]
     var index: Int?
@@ -20,8 +24,14 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         super.viewDidLoad()
         doButton.layer.cornerRadius = 5
         
-        viewName = DetailViewName.shared.name
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewColor = DetailViewData.shared.color
+        viewSubName = DetailViewData.shared.subname
+        
+        subtitleLabel.text = viewSubName
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {

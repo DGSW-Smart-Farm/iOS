@@ -22,9 +22,12 @@ class GraphVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewName = DetailViewName.shared.name
-        nameLabel.text = "\(DetailViewName.shared.name)현황"
+        // singleton pattern
+        graphView.set(colors: DetailViewData.shared.color)
+        viewName = DetailViewData.shared.name
+        nameLabel.text = "\(DetailViewData.shared.name)현황"
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         animateGraph()
     }

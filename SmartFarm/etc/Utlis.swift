@@ -9,29 +9,23 @@ import Alamofire
 import SwiftyJSON
 
 struct Utils {
-    static func request(uri: String, completion: @escaping (JSON) -> Void) throws {
+    static func request(uri: String, completion: @escaping (AFError?, Data?) -> Void) {
         let baseURL = "http://10.80.163.68:8000/v1"
         let url:String = baseURL + uri
-        var APIError: Error?
         
-        var result: JSON!
-        AF.request(url, method: .get).responseJSON {
+        AF.request(url, method: .get).responseData {
             switch $0.result {
             case .success(let value):
-                result = JSON(value)
-                completion(result)
+                completion(nil, value)
             case .failure(let error):
-                APIError = error
+                completion(error, nil)
             }
-        }
-        if APIError != nil {
-            throw APIError!
         }
     }
 }
 
-class DetailViewName {
-    static let shared = DetailViewName()
+class DetailViewData {
+    static let shared = DetailViewData()
     
     var name: String = ""
     var color: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -41,7 +35,7 @@ class DetailViewName {
 }
 
 extension Int {
-    mutating func indexName() -> String {
+    mutating func mainName() -> String {
         switch self {
         case 0:
             return "수분"
@@ -51,6 +45,20 @@ extension Int {
             return "LED"
         case 3:
             return "카메라"
+        default:
+            return "에러"
+        }
+    }
+    mutating func subName() -> String {
+        switch self {
+        case 0:
+            return "물주기"
+        case 1:
+            return ""
+        case 2:
+            return "LED"
+        case 3:
+            return ""
         default:
             return "에러"
         }

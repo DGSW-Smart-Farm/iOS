@@ -399,6 +399,7 @@
                     <connections>
                         <outlet property="doButton" destination="Egm-a5-hvM" id="Eq1-ip-teR"/>
                         <outlet property="picker" destination="wUM-Qi-ftE" id="qdj-DV-oKX"/>
+                        <outlet property="subtitleLabel" destination="jOZ-Fp-0i8" id="C4c-vx-vT5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evU-MB-DbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

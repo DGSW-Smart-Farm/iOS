@@ -14,7 +14,9 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if var index = index {
-            DetailViewName.shared.name = index.indexName()
+            DetailViewData.shared.name = index.mainName()
+            DetailViewData.shared.subname = index.subName()
+            DetailViewData.shared.color = FarmData().colorArr[index]
         }
         // Do any additional setup after loading the view.
     }

@@ -28,7 +28,7 @@
 		62863096265FBE6C002B7DE1 /* Utlis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62863095265FBE6C002B7DE1 /* Utlis.swift */; };
 		62984156263973CB009C496D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62984155263973CB009C496D /* MainCell.swift */; };
 		62B9732526514D72009227FB /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9732426514D72009227FB /* DetailVC.swift */; };
-		62BC2F9B266A610B0087A1FE /* DetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC2F9A266A610B0087A1FE /* DetailData.swift */; };
+		62BC2F9B266A610B0087A1FE /* DetailJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC2F9A266A610B0087A1FE /* DetailJSON.swift */; };
 		62CDBDAA263D7713009D7529 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62CDBDA7263D7713009D7529 /* NanumMyeongjo.ttf */; };
 		62CDBDAB263D7713009D7529 /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62CDBDA8263D7713009D7529 /* NanumMyeongjoBold.ttf */; };
 		62CDBDAC263D7713009D7529 /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62CDBDA9263D7713009D7529 /* NanumMyeongjoExtraBold.ttf */; };
@@ -59,7 +59,7 @@
 		62863095265FBE6C002B7DE1 /* Utlis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utlis.swift; sourceTree = "<group>"; };
 		62984155263973CB009C496D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		62B9732426514D72009227FB /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		62BC2F9A266A610B0087A1FE /* DetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailData.swift; sourceTree = "<group>"; };
+		62BC2F9A266A610B0087A1FE /* DetailJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJSON.swift; sourceTree = "<group>"; };
 		62CDBDA7263D7713009D7529 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
 		62CDBDA8263D7713009D7529 /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
 		62CDBDA9263D7713009D7529 /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		62387B48265E5D8F00634BA9 /* DeatilView */ = {
 			isa = PBXGroup;
 			children = (
-				62BC2F9A266A610B0087A1FE /* DetailData.swift */,
+				62BC2F9A266A610B0087A1FE /* DetailJSON.swift */,
 				62B9732426514D72009227FB /* DetailVC.swift */,
 				62387B46265E25DB00634BA9 /* GraphVC.swift */,
 				626698752640C89A00CD4690 /* PickerVC.swift */,
@@ -312,7 +312,7 @@
 				62863096265FBE6C002B7DE1 /* Utlis.swift in Sources */,
 				62B9732526514D72009227FB /* DetailVC.swift in Sources */,
 				62387B4D265E609900634BA9 /* FarmData.swift in Sources */,
-				62BC2F9B266A610B0087A1FE /* DetailData.swift in Sources */,
+				62BC2F9B266A610B0087A1FE /* DetailJSON.swift in Sources */,
 				6267832226157DE200EED0C5 /* SmartFarm.xcdatamodeld in Sources */,
 				62387B47265E25DB00634BA9 /* GraphVC.swift in Sources */,
 				62984156263973CB009C496D /* MainCell.swift in Sources */,
