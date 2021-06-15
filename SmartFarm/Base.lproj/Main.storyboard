@@ -247,6 +247,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SmartFarm" id="5La-Mc-2Xb"/>
+                    <connections>
+                        <outlet property="PickerView" destination="h41-jS-LvD" id="eQs-Ri-lwn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzy-DF-aC1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,6 +403,7 @@
                         <outlet property="doButton" destination="Egm-a5-hvM" id="Eq1-ip-teR"/>
                         <outlet property="picker" destination="wUM-Qi-ftE" id="qdj-DV-oKX"/>
                         <outlet property="subtitleLabel" destination="jOZ-Fp-0i8" id="C4c-vx-vT5"/>
+                        <outlet property="titleBackView" destination="v5E-Oh-Cai" id="Zgr-7D-WYM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evU-MB-DbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -466,7 +470,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ycv-FS-BCB" secondAttribute="height" multiplier="1:1" id="YCd-xM-nEH"/>
+                                    <constraint firstAttribute="width" secondItem="ycv-FS-BCB" secondAttribute="height" multiplier="1:1" priority="750" id="YCd-xM-nEH"/>
                                     <constraint firstItem="NHA-h4-BXS" firstAttribute="centerX" secondItem="ycv-FS-BCB" secondAttribute="centerX" id="lnH-yZ-XG0"/>
                                     <constraint firstItem="NHA-h4-BXS" firstAttribute="centerY" secondItem="ycv-FS-BCB" secondAttribute="centerY" id="t2o-av-86Z"/>
                                 </constraints>
@@ -533,6 +537,7 @@
                     </view>
                     <connections>
                         <outlet property="graphView" destination="ycv-FS-BCB" id="GYw-Gj-TaQ"/>
+                        <outlet property="nameBackView" destination="J3o-pb-tpc" id="hre-P8-bjn"/>
                         <outlet property="nameLabel" destination="hbx-eC-Fyh" id="2Ry-Xh-3iF"/>
                     </connections>
                 </viewController>

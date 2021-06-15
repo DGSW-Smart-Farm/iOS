@@ -13,6 +13,8 @@ class GraphVC: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var graphView: KDCircularProgress!
+    @IBOutlet weak var nameBackView: UIView!
+    
     var viewName: String = ""
     
     override func viewDidLoad() {
@@ -24,6 +26,7 @@ class GraphVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // singleton pattern
         graphView.set(colors: DetailViewData.shared.color)
+        nameBackView.backgroundColor = DetailViewData.shared.color
         viewName = DetailViewData.shared.name
         nameLabel.text = "\(DetailViewData.shared.name)현황"
     }

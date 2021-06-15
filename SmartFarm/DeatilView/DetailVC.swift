@@ -10,10 +10,15 @@ import UIKit
 class DetailVC: UIViewController {
     
     var index: Int?
+    @IBOutlet weak var PickerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         if var index = index {
+            if index == 1 || index == 3 {
+                PickerView.isHidden = true
+            } else { PickerView.isHidden = false}
             DetailViewData.shared.name = index.mainName()
             DetailViewData.shared.subname = index.subName()
             DetailViewData.shared.color = FarmData().colorArr[index]

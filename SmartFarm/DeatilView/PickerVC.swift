@@ -12,6 +12,7 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var doButton: UIButton!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var titleBackView: UIView!
     
     var viewName: String = ""
     var viewColor: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -30,9 +31,11 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         viewColor = DetailViewData.shared.color
         viewSubName = DetailViewData.shared.subname
-        
+        titleBackView.backgroundColor = DetailViewData.shared.color
         subtitleLabel.text = viewSubName
     }
+    
+    
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
