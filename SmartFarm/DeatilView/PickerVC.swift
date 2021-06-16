@@ -38,7 +38,7 @@ class PickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        
+        print("button pressed")
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

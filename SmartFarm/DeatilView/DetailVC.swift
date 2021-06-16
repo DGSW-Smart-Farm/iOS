@@ -10,18 +10,28 @@ import UIKit
 class DetailVC: UIViewController {
     
     var index: Int?
-    @IBOutlet weak var PickerView: UIView!
+    
+    @IBOutlet weak var pickerView: UIView!
+    @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         if var index = index {
-            if index == 1 || index == 3 {
-                PickerView.isHidden = true
-            } else { PickerView.isHidden = false}
+            DetailViewData.shared.index = index
+            imageView.image = FarmData().imageArr[index]
+            if index == 1 {
+                pickerView.layer.opacity = 0
+            }
+            else if index == 3 {
+                imageView.layer.opacity = 0
+                pickerView.layer.opacity = 0
+                graphView.layer.opacity = 0
+            }
             DetailViewData.shared.name = index.mainName()
             DetailViewData.shared.subname = index.subName()
-            DetailViewData.shared.color = FarmData().colorArr[index]
+            DetailViewData.shared.color = FarmData().detailColorArr[index]
         }
         // Do any additional setup after loading the view.
     }

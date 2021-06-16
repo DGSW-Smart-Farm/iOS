@@ -248,7 +248,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="SmartFarm" id="5La-Mc-2Xb"/>
                     <connections>
-                        <outlet property="PickerView" destination="h41-jS-LvD" id="eQs-Ri-lwn"/>
+                        <outlet property="graphView" destination="bdH-Pl-zgt" id="B7p-xX-Xiq"/>
+                        <outlet property="imageView" destination="Gxk-Ng-PO3" id="6cQ-Sw-Jjf"/>
+                        <outlet property="pickerView" destination="h41-jS-LvD" id="eQs-Ri-lwn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzy-DF-aC1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
