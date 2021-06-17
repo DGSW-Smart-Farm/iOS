@@ -28,19 +28,18 @@ class MainVC: UIViewController {
         // Do any additional setup after loading the view.
         backView.layer.cornerRadius = 25
         titleLabel.adjustsFontSizeToFitWidth = true
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        farmData.dataArr = []
+        FarmData.shared.dataArr = []
         self.tableView.reloadData()
         Utils.request(uri: "/get_home") { error, data in
             if error == nil {
                 let jsonData = try? self.decoder.decode(AllDataResponse.self, from: data!)
-                self.farmData.dataArr.append("\(jsonData?.humidity_gnd.value ?? 0)")
-                self.farmData.dataArr.append("\(jsonData?.temp.value ?? 0)")
-                self.farmData.dataArr.append("\(jsonData?.led.status ?? false)")
-                self.farmData.dataArr.append("더보기")
+                FarmData.shared.dataArr.append("\(jsonData?.humidity_gnd.value ?? 0)%")
+                FarmData.shared.dataArr.append("\(jsonData?.temp.value ?? 0)도")
+                FarmData.shared.dataArr.append("\(jsonData?.led.status ?? false)")
+                FarmData.shared.dataArr.append("더보기")
                 self.tableView.reloadData()
             }
         }
@@ -96,8 +95,11 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = farmData.titleArr[indexPath.row]
         
         // 데이터가 들어왔을경우 스켈레톤 해제
-        if farmData.dataArr.isEmpty != true {
-            cell.valueLabel.text = farmData.dataArr[indexPath.row]
+        if FarmData.shared.dataArr.isEmpty != true {
+            cell.valueLabel.text = FarmData.shared.dataArr[indexPath.row]
+            if indexPath.row == 2 {
+                cell.valueLabel.text = FarmData.shared.dataArr[indexPath.row]?.led()
+            }
             cell.valueBox.hideSkeleton(transition: .crossDissolve(0.25))
             cell.valueBox.layer.cornerRadius = 7
         }

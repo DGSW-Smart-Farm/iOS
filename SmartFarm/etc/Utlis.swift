@@ -35,6 +35,19 @@ class DetailViewData {
     private init() {}
 }
 
+extension String {
+    mutating func led() -> String {
+        switch self {
+        case "true":
+            return "켜짐"
+        case "false":
+            return "꺼짐"
+        default:
+            return "에러"
+        }
+    }
+}
+
 extension Int {
     mutating func mainName() -> String {
         switch self {

@@ -538,9 +538,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="explain2Label" destination="5Eh-me-LJl" id="Dud-Fg-dhB"/>
+                        <outlet property="explainLabel" destination="3VS-wj-AaR" id="YkG-Ok-WHq"/>
                         <outlet property="graphView" destination="ycv-FS-BCB" id="GYw-Gj-TaQ"/>
                         <outlet property="nameBackView" destination="J3o-pb-tpc" id="hre-P8-bjn"/>
                         <outlet property="nameLabel" destination="hbx-eC-Fyh" id="2Ry-Xh-3iF"/>
+                        <outlet property="valueLabel" destination="NHA-h4-BXS" id="TYY-jL-MEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4P-FB-Ddy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
